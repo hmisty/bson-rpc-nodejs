@@ -1,0 +1,26 @@
+{
+  "name": "bson-rpc",
+  "version": "0.5.1",
+  "description": "the nodejs version of bson-rpc",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hmisty/bson-rpc-nodejs.git"
+  },
+  "keywords": [
+    "bson",
+    "rpc"
+  ],
+  "author": "Evan Liu (hmisty)",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/hmisty/bson-rpc-nodejs/issues"
+  },
+  "homepage": "https://github.com/hmisty/bson-rpc-nodejs#readme",
+  "dependencies": {
+    "bson": "^1.0.4"
+  }
+}
