@@ -1,5 +1,5 @@
 'use strict';
 
-var client = require('./client');
+var client = require('./lib/client');
 
 module.exports = {client};

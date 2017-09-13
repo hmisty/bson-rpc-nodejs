@@ -1,4 +1,4 @@
-var bson_rpc = require('../bson_rpc');
+var bson_rpc = require('..');
 
 var proxy = new bson_rpc.client('127.0.0.1', 8181);
 proxy.use_service(['add']);

@@ -1,4 +1,4 @@
-var bson_rpc = require('../bson_rpc');
+var bson_rpc = require('..');
 
 /****** test *******/
 var keep_running = true;
