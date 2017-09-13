@@ -5,7 +5,7 @@ var keep_running = true;
 var success = 0;
 var failure = 0;
 
-var proxy = new bson_rpc('127.0.0.1', 8181);
+var proxy = new bson_rpc.client('127.0.0.1', 8181);
 proxy.use_service(['hi', 'echo', 'add']);
 
 proxy.on_result((err, result) => {
