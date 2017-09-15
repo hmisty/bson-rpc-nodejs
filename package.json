@@ -1,6 +1,6 @@
 {
   "name": "bson-rpc",
-  "version": "0.5.3",
+  "version": "0.6.0",
   "description": "the nodejs version of bson-rpc",
   "main": "index.js",
   "scripts": {
@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/hmisty/bson-rpc-nodejs#readme",
   "dependencies": {
-    "bson": "^1.0.4"
+    "bson": "^1.0.4",
+    "zeromq": "^4.6.0"
   }
 }
