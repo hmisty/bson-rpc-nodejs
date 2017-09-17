@@ -21,7 +21,6 @@
   },
   "homepage": "https://github.com/hmisty/bson-rpc-nodejs#readme",
   "dependencies": {
-    "bson": "^1.0.4",
-    "zeromq": "^4.6.0"
+    "bson": "^1.0.4"
   }
 }
