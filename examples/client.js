@@ -12,4 +12,7 @@ proxy.on_result((err, result) => {
 proxy.connect(() => {
 	console.log('connected');
 	proxy.add(1, 2);
+	proxy.add(1, 2);
+	proxy.add(1, 2);
+	proxy.add(1, 2);
 });
