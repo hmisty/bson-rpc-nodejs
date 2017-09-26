@@ -29,6 +29,20 @@ proxy.connect(() => {
 });
 ```
 
+server.js
+
+```javascript
+var bson_rpc = require('bson-rpc');
+
+var server = new bson_rpc.server('127.0.0.1', 8181);
+
+server['add'] = (a, b) => {
+	return a + b;
+};
+
+server.start();
+```
+
 ## Other Languages
 
 the python version is here: https://github.com/hmisty/bson-rpc
