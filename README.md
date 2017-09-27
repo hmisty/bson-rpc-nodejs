@@ -17,15 +17,15 @@ var bson_rpc = require('bson-rpc');
 var proxy = new bson_rpc.client('127.0.0.1', 8181);
 proxy.use_service(['add']);
 
-proxy.on_result((err, result) => {
-	if (err) throw err;
-	console.log('result is ' + result);
-	proxy.disconnect();
+proxy.connect();
+
+proxy.on_result(proxy.add(1, 2), function (err, doc) {
+	console.log(doc);
 });
 	
-proxy.connect(() => {
-	console.log('connected');
-	proxy.add(1, 2);
+proxy.on_result(proxy.add(3, 4), function (err, doc) {
+	console.log(doc);
+	proxy.disconnect();
 });
 ```
 
