@@ -21,7 +21,7 @@ function start() {
 }
 
 proxy.connect(() => {
-						 start();
+	start();
 });
 
 //console.log(util.inspect(proxy.obj_received));
