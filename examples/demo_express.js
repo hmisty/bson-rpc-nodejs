@@ -6,7 +6,9 @@ var app = express();
 var proxy = new bson_rpc.client('127.0.0.1', 8181);
 proxy.use_service(['add']);
 
-proxy.connect();
+proxy.connect(() => {
+	console.log('connected');
+});
 
 app.get('/', function (req, res) {
 	res.send('<ul>' +
@@ -18,25 +20,25 @@ app.get('/', function (req, res) {
 });
 
 app.get('/1', function (req, res) {
-	proxy.on_result(proxy.add(1, 2), function (err, doc) {
+	proxy.add(1, 2).then(function (err, doc) {
 		res.send(JSON.stringify(doc));
 	});
 });
 
 app.get('/2', function (req, res) {
-	proxy.on_result(proxy.add(3, 4), function (err, doc) {
+	proxy.add(3, 4).then(function (err, doc) {
 		res.send(JSON.stringify(doc));
 	});
 });
 
 app.get('/3', function (req, res) {
-	proxy.on_result(proxy.add(5, 6), function (err, doc) {
+	proxy.add(5, 6).then(function (err, doc) {
 		res.send(JSON.stringify(doc));
 	});
 });
 
 app.get('/4', function (req, res) {
-	proxy.on_result(proxy.add(7, 8), function (err, doc) {
+	proxy.add(7, 8).then(function (err, doc) {
 		res.send(JSON.stringify(doc));
 	});
 });
