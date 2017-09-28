@@ -8,21 +8,25 @@ var failure = 0;
 var proxy = new bson_rpc.client('127.0.0.1', 8181);
 proxy.use_service(['hi', 'echo', 'add']);
 
-on_result_func = (err, result) => {
-	if (err) throw err;
-	
-	if (result == 3) { //1+2=3
-		success += 1;
-	} else {
-		failure += 1;
-		console.log('result ' + result + ' is not 3! ');
-	}
+var run = () => {
 
-	if (keep_running) {
-		proxy.on_result(proxy.add(1, 2), on_result_func);
-	} else {
-		proxy.disconnect();
-	}
+	var i = Math.random(), j = Math.random();
+	var expect = i + j;
+
+	proxy.add(i, j).then((err, result) => {
+		if (result == expect) {
+			success += 1;
+		} else {
+			failure += 1;
+			console.log('expect: ', expect, ' actual: ', result);
+		}
+
+		if (keep_running) {
+			run();
+		} else {
+			proxy.disconnect();
+		}
+	});
 
 };
 
@@ -42,6 +46,6 @@ setTimeout(() => {
 
 var workers = 1; //20;
 for (var i = 0; i < workers; i++) {
-	proxy.on_result(proxy.add(1, 2), on_result_func);
+	run();
 }
 
