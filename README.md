@@ -19,11 +19,11 @@ proxy.use_service(['add']);
 
 proxy.connect();
 
-proxy.on_result(proxy.add(1, 2), function (err, doc) {
+proxy.add(1, 2).then((err, doc) => {
 	console.log(doc);
 });
 	
-proxy.on_result(proxy.add(3, 4), function (err, doc) {
+proxy.add(3, 4).then((err, doc) => {
 	console.log(doc);
 	proxy.disconnect();
 });
