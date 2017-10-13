@@ -1,6 +1,6 @@
 {
   "name": "bson-rpc",
-  "version": "0.11.2",
+  "version": "0.12.0",
   "description": "the nodejs version of bson-rpc",
   "main": "index.js",
   "scripts": {
@@ -14,7 +14,7 @@
     "bson",
     "rpc"
   ],
-  "author": "Evan Liu (hmisty)",
+  "author": "Evan Liu (hmisty@gmail.com)",
   "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/hmisty/bson-rpc-nodejs/issues"
