@@ -1,6 +1,6 @@
 {
   "name": "bson-rpc",
-  "version": "0.15.0",
+  "version": "0.15.1",
   "description": "the nodejs version of bson-rpc",
   "main": "index.js",
   "scripts": {
