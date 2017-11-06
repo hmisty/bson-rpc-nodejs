@@ -1,0 +1,6 @@
+- 0.15.0
+	four connection models: local, stand-alone, stand-by, and load-balance.
+	client die if connection is broken. we reply on supervisor to restart node.
+
+- 0.12.0
+	enhance re-connect mechanism.

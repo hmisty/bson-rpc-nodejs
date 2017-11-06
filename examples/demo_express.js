@@ -3,7 +3,8 @@ var bson_rpc = require('..');
 var express = require('express');
 var app = express();
 
-var proxy = new bson_rpc.client('127.0.0.1', 8181);
+//var proxy = new bson_rpc.client('127.0.0.1', 8181);
+var proxy = new bson_rpc.client(['10.0.0.1', '10.0.0.3', '10.0.0.5', '127.0.0.1', '10.0.0.2', '10.0.0.4'], 8181);
 proxy.use_service(['add']);
 
 proxy.connect(() => {
