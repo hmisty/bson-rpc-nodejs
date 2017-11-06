@@ -1,3 +1,9 @@
+- 0.15.2
+	fix LOAD_BALANCE bug.
+
+- 0.15.1
+	LOAD_BALANCE MODE has a bug. use 0.15.2 instead.
+
 - 0.15.0
 	four connection models: local, stand-alone, stand-by, and load-balance.
 	client die if connection is broken. we reply on supervisor to restart node.
