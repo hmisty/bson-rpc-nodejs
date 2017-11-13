@@ -7,6 +7,15 @@ var app = express();
 var proxy = new bson_rpc.client(['10.0.0.1', '10.0.0.3', '10.0.0.5', '127.0.0.1', '10.0.0.2', '10.0.0.4'], 8181);
 proxy.use_service(['add']);
 
+//DOF is true by default
+/* proxy.die_on_failure(false);
+process.on('unhandledRejection', (reason, p) => {
+	console.log("Promise Rejection Caught at: Promise ", p, " reason: ", reason);
+	// application specific logging, throwing an error, or other logic here
+	process.exit(1);
+});
+*/
+
 proxy.connect(() => {
 	//console.log('connected');
 });
