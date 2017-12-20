@@ -1,3 +1,7 @@
+- 0.16.1
+	fix socket error not going to die which prevents auto fail-over.
+	improve console.log to log4js.
+
 - 0.15.2
 	fix LOAD_BALANCE bug.
 
