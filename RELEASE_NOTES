@@ -1,3 +1,6 @@
+- 0.16.2
+	fix log4js with pm2 compatibility.
+
 - 0.16.1
 	fix socket error not going to die which prevents auto fail-over.
 	improve console.log to log4js.
